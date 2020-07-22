@@ -27,7 +27,7 @@ int upgradePoints;
 				g.setColor(Color.white);
 				g.fillOval(x, y, width, height);
 		    }
-		super.draw(g);
+		
 		}
 		public void right() {
 			

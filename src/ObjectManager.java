@@ -105,7 +105,7 @@ for (int i = 0; i < enemies.size(); i++) {
 			chara.height=20;}
 
 		}
-		if (chara.width>80 && level ==1) {
+		if (chara.width>70 && level ==1) {
 	for (int i = 0; i < enemies.size(); i++) {
 				if(level2Removed=false) {
 		enemies.get(i).isActive=false;		
@@ -209,7 +209,7 @@ else {
 		for (int i = 0; i < upgrades.size(); i++) {
 			upgrades.get(i).draw(g);
 		}
-		g.setColor(Color.YELLOW);
+		g.setColor(Color.GRAY);
 		Font titleFont = new Font("Arial", Font.PLAIN, 20);
 		g.setFont(titleFont);
 

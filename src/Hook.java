@@ -28,7 +28,7 @@ public class Hook extends GameObject{
 	    	g.setColor(Color.GRAY);
 			g.fillRect(x, y, width, height);
 	    }
-super.draw(g);
+
 	}
 
 	

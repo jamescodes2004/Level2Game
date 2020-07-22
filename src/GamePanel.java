@@ -72,6 +72,9 @@ ObjectManager manager;
 	    	if(guy.isActive==false) {
 	    	currentState=END;	
 	    	}
+	    	if(guy.width>80) {
+	    		currentState=END;
+	    	}
 	    	
 	    }
 	    void updateEndState()  {
@@ -82,7 +85,7 @@ ObjectManager manager;
 	    }
 	    void drawMenuState(Graphics g) { 
 
-	    	g.setColor(Color.BLACK);
+	    	g.setColor(Color.LIGHT_GRAY);
 	    	g.fillRect(0, 0, game.WIDTH, game.HEIGHT);
 	    	g.setFont(titleFont);
 	    	g.setColor(Color.YELLOW);
@@ -104,7 +107,7 @@ ObjectManager manager;
 	
 	    }
 	    void drawEndState(Graphics g)  { 
-	    	if(guy.width>100) {
+	    	if(guy.width>80) {
 	    		g.setColor(Color.GREEN);
 	    		g.fillRect(0, 0, game.WIDTH, game.HEIGHT);
 	    		g.setColor(Color.BLACK);
@@ -112,7 +115,7 @@ ObjectManager manager;
 	    		g.drawString("YOU", 460, 300);
 		    	g.drawString("WIN", 460, 500);
 		    	g.setFont(titleFont);
-		    	g.drawString("You reached a large enough size to eat the boat!", 200, 650);
+		    	g.drawString("You reached a large enough size to eat the boat!", 50, 650);
 		    	g.drawString("Click ENTER to restart", 375, 800);
 	    	}
 	    	else {
@@ -133,7 +136,7 @@ ObjectManager manager;
 	    	g.drawString("Watch out though, other fish are also trying to ", 330, 250);
 	    	g.drawString("collect green blobs and if they are bigger they'll eat you for them!", 225, 300);
 	    	g.drawString("As you progress through the levels, your max size will get bigger", 225, 500);
-	    	g.drawString("One you are big enough, eat the boat and you win!", 285, 650);
+	    	g.drawString("One you are big enough to eat the boat, you win!", 285, 650);
 	    }
 	    
 	@Override
@@ -153,6 +156,9 @@ ObjectManager manager;
 		      
 		    } 
 
+		    if(currentState==GAME) {
+		    	
+		    }
 		    else {
 		    	
 		    	 

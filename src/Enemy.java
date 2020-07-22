@@ -55,7 +55,7 @@ void draw(Graphics g){
 
     
     
-  super.draw(g);}
+ }
     void update() {
     	
     	
